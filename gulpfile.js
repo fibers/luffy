@@ -21,6 +21,7 @@ elixir(function (mix) {
     mix.styles([
             'bootstrap.css',
             'bootstrap-theme.css',
+            'main.css',
         ])
         .scripts(['jquery.js', 'bootstrap.js']);
 
