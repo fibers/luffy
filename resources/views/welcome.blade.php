@@ -1,50 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Laravel</title>
+@extends('layouts.main')
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('title', 'App Data')
 
-    <style>
-        html, body {
-            height: 100%;
-        }
+@section('content')
 
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            display: table;
-            font-weight: 100;
-            font-family: 'Lato';
-        }
+    <div class="jumbotron">
+        <h1>One Piece</h1>
 
-        .container {
-            text-align: center;
-            display: table-cell;
-            vertical-align: middle;
-        }
+        <p>Welcome to One Piece.</p>
 
-        .content {
-            text-align: center;
-            display: inline-block;
-        }
-
-        .title {
-            font-size: 96px;
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-    <div class="content">
-        <div class="title">Laravel 5</div>
-
+        <p>This is the place in which our colleagues can amuse.</p>
     </div>
 
-    @foreach($users as $user)
-        <p>{{ $user->nick }}</p>
-    @endforeach
-</div>
-</body>
-</html>
+@endsection

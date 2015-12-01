@@ -16,13 +16,16 @@ elixir(function (mix) {
     mix.copy('node_modules/bootstrap/dist/css/bootstrap.css', 'resources/assets/css/bootstrap.css')
         .copy('node_modules/bootstrap/dist/css/bootstrap-theme.css', 'resources/assets/css/bootstrap-theme.css')
         .copy('node_modules/bootstrap/dist/js/bootstrap.js', 'resources/assets/js/bootstrap.js')
+        .copy('node_modules/jquery/dist/jquery.js', 'resources/assets/js/jquery.js');
 
-        .styles([
+    mix.styles([
             'bootstrap.css',
             'bootstrap-theme.css',
         ])
+        .scripts(['jquery.js', 'bootstrap.js']);
 
-        .scripts([
-            'bootstrap.js',
-        ]);
+    mix.version([
+        'css/all.css',
+        'js/all.js'
+    ]);
 });
