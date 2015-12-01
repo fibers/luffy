@@ -17,8 +17,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/index">
-                <i class="fa fa-flag"></i>
+            <a class="navbar-brand" href="/">
+                <i class="fa fa-home fa-fw fa-large"></i>
                 Luffy
             </a>
         </div>
@@ -33,67 +33,23 @@
                         <li class="dropdown-header">Users</li>
                         <li>
                             <a href="/users">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> User List
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/users/subscriptions">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> User Subscription List
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/users/reviews?grid%5Border%5D=last_updated_at&grid%5Border_direction%5D=desc&grid%5Bf%5D%5Bstate%5D%5B%5D=0">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> User Review List
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/users/bad_state?grid%5Bf%5D%5Bstatus%5D%5B%5D=1&grid%5Border%5D=total_count_updated_at&grid%5Border_direction%5D=desc">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Bad User List
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/users/disabled_state">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Disabled User List
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/users/risk_state">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Risk User List
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="/users/map" data-no-turbolink>
-                                <span class="sidebar-nav-item-icon fa fa-globe fa-fw"></span> Map View
+                                <span class="fa fa-users fa-fw"></span> User List
                             </a>
                         </li>
 
-                        <li class="dropdown-header">Items</li>
+                        <li class="dropdown-header">Dramas</li>
                         <li>
-                            <a href="<%= products_path(grid: {f: {internal_status: Settings.PRODUCT_INTERNAL_STATUSES.PendingReview.to_i, state: Settings.PRODUCT_STATUSES.Listing}}) %>">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Item List
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/products/weight">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Item Weight List
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/products/hot_items">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Hot Item List
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/categories">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Categories
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="/products/map" data-no-turbolink>
-                                <span class="sidebar-nav-item-icon fa fa-globe fa-fw"></span> Map View
+                            <a href="/dramas">
+                                <span class="fa fa-book fa-fw"></span> Drama List
                             </a>
                         </li>
 
+                        <li class="dropdown-header">Topics</li>
+                        <li>
+                            <a href="/topics">
+                                <span class="fa fa-list fa-fw"></span> Topic List
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="dropdown">

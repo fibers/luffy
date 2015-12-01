@@ -14,13 +14,14 @@ var elixir = require('laravel-elixir');
 elixir(function (mix) {
 
     mix.copy('node_modules/bootstrap/dist/css/bootstrap.css', 'resources/assets/css/bootstrap.css')
-        .copy('node_modules/bootstrap/dist/css/bootstrap-theme.css', 'resources/assets/css/bootstrap-theme.css')
+        .copy('node_modules/font-awesome/css/font-awesome.css', 'resources/assets/css/font-awesome.css')
         .copy('node_modules/bootstrap/dist/js/bootstrap.js', 'resources/assets/js/bootstrap.js')
-        .copy('node_modules/jquery/dist/jquery.js', 'resources/assets/js/jquery.js');
+        .copy('node_modules/jquery/dist/jquery.js', 'resources/assets/js/jquery.js')
+        .copy('node_modules/font-awesome/fonts', 'public/build/fonts');
 
     mix.styles([
             'bootstrap.css',
-            'bootstrap-theme.css',
+            'font-awesome.css',
             'main.css',
         ])
         .scripts(['jquery.js', 'bootstrap.js']);
@@ -30,7 +31,7 @@ elixir(function (mix) {
         'js/all.js'
     ]);
 
-    mix.browserSync({
-        proxy: 'localhost'
-    });
+    //mix.browserSync({
+    //    proxy: 'localhost'
+    //});
 });
