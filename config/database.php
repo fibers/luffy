@@ -52,12 +52,24 @@ return [
             'prefix'   => '',
         ],
 
-        'mysql' => [
+        'mysql_luffy' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'forge'),
-            'username'  => env('DB_USERNAME', 'forge'),
-            'password'  => env('DB_PASSWORD', ''),
+            'host'      => env('DB_HOST_LUFFY', 'localhost'),
+            'database'  => env('DB_DATABASE_LUFFY', 'forge'),
+            'username'  => env('DB_USERNAME_LUFFY', 'forge'),
+            'password'  => env('DB_PASSWORD_LUFFY', ''),
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+            'strict'    => false,
+        ],
+
+        'mysql_api' => [
+            'driver'    => 'mysql',
+            'host'      => env('DB_HOST_API', 'localhost'),
+            'database'  => env('DB_DATABASE_API', 'forge'),
+            'username'  => env('DB_USERNAME_API', 'forge'),
+            'password'  => env('DB_PASSWORD_API', ''),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
