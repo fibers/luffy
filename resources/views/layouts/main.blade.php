@@ -27,7 +27,7 @@
 
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">App Data <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">App <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
 
                         <li class="dropdown-header">Users</li>

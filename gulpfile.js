@@ -29,4 +29,8 @@ elixir(function (mix) {
         'css/all.css',
         'js/all.js'
     ]);
+
+    mix.browserSync({
+        proxy: 'localhost'
+    });
 });

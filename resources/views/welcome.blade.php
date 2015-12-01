@@ -1,15 +1,15 @@
 @extends('layouts.main')
 
-@section('title', 'App Data')
+@section('title', 'Welcome')
 
 @section('content')
 
     <div class="jumbotron">
-        <h1>One Piece</h1>
+        <h1>Luffy</h1>
 
-        <p>Welcome to One Piece.</p>
+        <p>Welcome to Luffy.</p>
 
-        <p>This is the place in which our colleagues can amuse.</p>
+        <p>This is the backend system for Yuxi App</p>
     </div>
 
 @endsection
