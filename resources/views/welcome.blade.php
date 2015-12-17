@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layout.layout')
 
 @section('title', 'Welcome')
 
@@ -10,6 +10,7 @@
         <p>Welcome to Luffy.</p>
 
         <p>This is the backend system for Yuxi App</p>
+
     </div>
 
 @endsection

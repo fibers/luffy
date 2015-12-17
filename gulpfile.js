@@ -31,7 +31,7 @@ elixir(function (mix) {
         'js/all.js'
     ]);
 
-    //mix.browserSync({
-    //    proxy: 'localhost'
-    //});
+    mix.browserSync({
+        proxy: 'localhost:8000'
+    });
 });

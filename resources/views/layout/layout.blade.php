@@ -78,7 +78,7 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jobs <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Push <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header">Messages</li>
                         <li class="dropdown-submenu">
@@ -170,11 +170,6 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a href="/tools/items">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Items By Position
-                            </a>
-                        </li>
-                        <li>
                             <a href="/tools/start_image/edit">
                                 <span class="sidebar-nav-item-icon fa fa-image fa-fw"></span> Start Image
                             </a>
@@ -182,16 +177,6 @@
                         <li>
                             <a href="/tools/home_banner/edit">
                                 <span class="sidebar-nav-item-icon fa fa-home fa-fw"></span> Home Banner
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/tools/recommend_items/new">
-                                <span class="sidebar-nav-item-icon fa fa-comment-o fa-fw"></span> Recommend Items
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/es">
-                                <span class="sidebar-nav-item-icon fa fa-comment-o fa-fw"></span> es List
                             </a>
                         </li>
                     </ul>
@@ -220,27 +205,12 @@
 
                 {{--<% if session[:current_admin_id] and session[:is_super_admin] %>--}}
                 <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Privileges <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Privileges <span
+                                class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
                             <a href="/admins">
                                 <span class="sidebar-nav-item-icon fa fa-users fa-fw"></span> Administrators
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/smart_audit/operators">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Checked In Users
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/admins/item_risk_keywords">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Item Risk Keywords
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/admins/white_list">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> White List
                             </a>
                         </li>
 
@@ -258,15 +228,15 @@
             <ul class="nav navbar-nav navbar-right">
                 {{--<% if session[:current_admin_id] %>--}}
                 {{--<li class="dropdown">--}}
-                    {{--<a id="admininfo" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">--}}
-                        {{--Welcome, <%= session[:current_admin_username] %>--}}
-                        {{--<b class="caret"></b>--}}
-                    {{--</a>--}}
-                    {{--<ul class="dropdown-menu" role="menu" aria-labelledby="admininfo">--}}
-                        {{--<li role="presentation">--}}
-                            {{--<%= link_to "Change password", password_admin_path(session[:current_admin_id]), role: "menuitem", tabindex: "-1" %>--}}
-                        {{--</li>--}}
-                    {{--</ul>--}}
+                {{--<a id="admininfo" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">--}}
+                {{--Welcome, <%= session[:current_admin_username] %>--}}
+                {{--<b class="caret"></b>--}}
+                {{--</a>--}}
+                {{--<ul class="dropdown-menu" role="menu" aria-labelledby="admininfo">--}}
+                {{--<li role="presentation">--}}
+                {{--<%= link_to "Change password", password_admin_path(session[:current_admin_id]), role: "menuitem", tabindex: "-1" %>--}}
+                {{--</li>--}}
+                {{--</ul>--}}
                 {{--</li>--}}
                 {{--<li><a href="/logout">Logout</a></li>--}}
 
