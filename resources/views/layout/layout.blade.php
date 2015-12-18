@@ -88,10 +88,10 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Push <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown-header">Information</li>
+                        <li class="dropdown-header">Statistics</li>
                         <li>
-                            <a href="/push/register_users">
-                                <span class="fa fa-list fw"></span> Register Users
+                            <a href="/push/registered_users">
+                                <span class="fa fa-list fw"></span> Registered Users
                             </a>
                         </li>
 

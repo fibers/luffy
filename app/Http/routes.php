@@ -28,5 +28,5 @@ Route::group(['prefix' => 'app_data'], function () {
 
 
 Route::group(['prefix' => 'push', 'namespace' => 'push'], function () {
-    Route::get('register_users', 'InformationsController@register_users');
+    Route::get('registered_users', 'StatisticsController@registered_users');
 });
