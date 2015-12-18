@@ -15,5 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('imuser', 'IMUserController');
+Route::group(['prefix' => 'app_data'], function () {
+    Route::resource('users', 'UsersController',
+        ['only' => ['index', 'show', 'edit', 'update']]);
+    Route::resource('stories', 'StoriesController',
+        ['only' => ['index', 'show', 'edit', 'update']]);
+    Route::resource('self_stories', 'SelfStoriesController',
+        ['only' => ['index', 'show', 'edit', 'update']]);
+    Route::resource('posts', 'PostsController',
+        ['only' => ['index', 'show', 'edit', 'update']]);
+});
 
+
+Route::group(['prefix' => 'push', 'namespace' => 'push'], function () {
+    Route::get('register_users', 'InformationsController@register_users');
+});

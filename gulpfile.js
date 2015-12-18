@@ -19,15 +19,16 @@ elixir(function (mix) {
         .copy('node_modules/jquery/dist/jquery.js', 'resources/assets/js/jquery.js')
         .copy('node_modules/font-awesome/fonts', 'public/build/fonts');
 
-    mix.styles([
+    mix.sass('main.scss').
+        styles([
             'bootstrap.css',
-            'font-awesome.css',
-            'main.css',
+            'font-awesome.css'
         ])
         .scripts(['jquery.js', 'bootstrap.js']);
 
     mix.version([
         'css/all.css',
+        'css/main.css',
         'js/all.js'
     ]);
 

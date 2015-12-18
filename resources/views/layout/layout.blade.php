@@ -4,6 +4,7 @@
     <title>Luffy - @yield('title')</title>
 
     <link rel="stylesheet" href="{{ elixir('css/all.css') }}">
+    <link rel="stylesheet" href="{{ elixir('css/main.css') }}">
 </head>
 
 <body>
@@ -27,51 +28,58 @@
 
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">App <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">App Data<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
 
                         <li class="dropdown-header">Users</li>
                         <li>
-                            <a href="/users">
+                            <a href="/app_data/users">
                                 <span class="fa fa-users fa-fw"></span> User List
                             </a>
                         </li>
 
                         <li class="dropdown-header">Dramas</li>
                         <li>
-                            <a href="/dramas">
-                                <span class="fa fa-book fa-fw"></span> Drama List
+                            <a href="/app_data/stories">
+                                <span class="fa fa-book fa-fw"></span> Story List
                             </a>
                         </li>
 
-                        <li class="dropdown-header">Topics</li>
+                        <li class="dropdown-header">Self Stories</li>
                         <li>
-                            <a href="/topics">
-                                <span class="fa fa-list fa-fw"></span> Topic List
+                            <a href="/app_data/self_stories">
+                                <span class="fa fa-book fa-fw"></span> Self Story List
+                            </a>
+                        </li>
+
+                        <li class="dropdown-header">Posts</li>
+                        <li>
+                            <a href="/app_data/posts">
+                                <span class="fa fa-list fa-fw"></span> Post List
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Audit <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">App Operation <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
 
-                        <li class="dropdown-header">Tasks</li>
+                        <li class="dropdown-header">Images</li>
                         <li>
-                            <a href="/item_tasks">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Item Audit Tasks
+                            <a href="/app_operation/launch_image">
+                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Launch Image
                             </a>
                         </li>
 
                         <li>
-                            <a href="/item_operation_rules">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Item Operation Rules
+                            <a href="/app_operation/banner">
+                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Banner
                             </a>
                         </li>
-                        <li class="dropdown-header">Smart Audit</li>
+                        <li class="dropdown-header">Events</li>
                         <li>
-                            <a href="/smart_audit/board?t=3">
-                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Smart Audit v3
+                            <a href="/app_operation/events">
+                                <span class="sidebar-nav-item-icon fa fa-list fa-fw"></span> Events
                             </a>
                         </li>
                     </ul>
@@ -80,103 +88,36 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Push <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown-header">Messages</li>
-                        <li class="dropdown-submenu">
-                            <a href="#">
-                                <span class="sidebar-nav-item-icon fa fa-file-text-o fa-fw"></span> Templates
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="/templates/pushes">
-                                        <span class="fa fa-list fw"></span> PUSH List
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/templates/emails">
-                                        <span class="fa fa-list fw"></span> Email List
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/templates/system_messages">
-                                        <span class="fa fa-list fw"></span> SystemMessage List
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/templates/smses">
-                                        <span class="fa fa-list fw"></span> SMS List
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                            <a href="#">
-                                <span class="sidebar-nav-item-icon fa fa-wrench fa-fw"></span> Manual
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-header">Statistics</li>
-                                <li>
-                                    <a href="/manual/statistics">
-                                        <span class="fa fa-list fw"></span> Manual List
-                                    </a>
-                                </li>
-                                <li class="dropdown-header">SystemMessage</li>
-                                <li>
-                                    <a href="/manual/system_messages/new">
-                                        <span class="fa fa-pencil-square-o fw"></span> Compose
-                                    </a>
-                                </li>
-                                <li class="dropdown-header">Email</li>
-                                <li>
-                                    <a href="/manual/emails/new">
-                                        <span class="fa fa-pencil-square-o fw"></span> Compose
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/manual/emails/good_items">
-                                        <span class="fa fa-pencil-square-o fw"></span> Good Items
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="hidden">
-                            <a href="#">
-                                <span class="sidebar-nav-item-icon fa fa-pencil fa-fw"></span> Logs
+                        <li class="dropdown-header">Information</li>
+                        <li>
+                            <a href="/push/register_users">
+                                <span class="fa fa-list fw"></span> Register Users
                             </a>
                         </li>
 
-                        <li class="dropdown-header">FMMC</li>
+                        <li class="dropdown-header">Rules</li>
                         <li>
-                            <a href="/fmmc/crons">
-                                <span class="sidebar-nav-item-icon fa fa-clock-o fa-fw"></span> Crontab
+                            <a href="/push/rules">
+                                <span class="sidebar-nav-item-icon fa fa-clock-o fa-fw"></span> rules
                             </a>
                         </li>
-                        <li>
-                            <a href="/fmmc/tasks">
-                                <span class="sidebar-nav-item-icon fa fa-tasks fa-fw"></span> Task
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/fmmc/triggers">
-                                <span class="sidebar-nav-item-icon fa fa-send fa-fw"></span> Trigger
-                            </a>
-                        </li>
-
                     </ul>
 
                 </li>
 
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Operation Data <span
+                                class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a href="/tools/start_image/edit">
-                                <span class="sidebar-nav-item-icon fa fa-image fa-fw"></span> Start Image
+                            <a href="/operation_data/new_users">
+                                <span class="sidebar-nav-item-icon fa fa-image fa-fw"></span> New Users
                             </a>
                         </li>
                         <li>
-                            <a href="/tools/home_banner/edit">
-                                <span class="sidebar-nav-item-icon fa fa-home fa-fw"></span> Home Banner
+                            <a href="/operation_data/active_users">
+                                <span class="sidebar-nav-item-icon fa fa-home fa-fw"></span> Active Users
                             </a>
                         </li>
                     </ul>
