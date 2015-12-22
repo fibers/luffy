@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'app_data'], function () {
+Route::group(['prefix' => 'content', 'namespace' => 'content'], function () {
     Route::resource('users', 'UsersController',
         ['only' => ['index', 'show', 'edit', 'update']]);
     Route::resource('stories', 'StoriesController',
@@ -28,5 +28,7 @@ Route::group(['prefix' => 'app_data'], function () {
 
 
 Route::group(['prefix' => 'push', 'namespace' => 'push'], function () {
-    Route::get('registered_users', 'StatisticsController@registered_users');
+    Route::get('registered_users', 'RegisteredUsersController@index');
+    Route::get('jobs', 'JobsController@index');
 });
+

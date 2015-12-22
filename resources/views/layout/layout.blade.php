@@ -28,33 +28,33 @@
 
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">App Data<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Content<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
 
                         <li class="dropdown-header">Users</li>
                         <li>
-                            <a href="/app_data/users">
+                            <a href="{{ route('content.users.index') }}">
                                 <span class="fa fa-users fa-fw"></span> User List
                             </a>
                         </li>
 
                         <li class="dropdown-header">Dramas</li>
                         <li>
-                            <a href="/app_data/stories">
+                            <a href="{{ route('content.stories.index') }}">
                                 <span class="fa fa-book fa-fw"></span> Story List
                             </a>
                         </li>
 
                         <li class="dropdown-header">Self Stories</li>
                         <li>
-                            <a href="/app_data/self_stories">
+                            <a href="{{ route('content.self_stories.index') }}">
                                 <span class="fa fa-book fa-fw"></span> Self Story List
                             </a>
                         </li>
 
                         <li class="dropdown-header">Posts</li>
                         <li>
-                            <a href="/app_data/posts">
+                            <a href="{{ route('content.posts.index') }}">
                                 <span class="fa fa-list fa-fw"></span> Post List
                             </a>
                         </li>
@@ -88,17 +88,14 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Push <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown-header">Statistics</li>
                         <li>
                             <a href="/push/registered_users">
                                 <span class="fa fa-list fw"></span> Registered Users
                             </a>
                         </li>
-
-                        <li class="dropdown-header">Rules</li>
                         <li>
                             <a href="/push/rules">
-                                <span class="sidebar-nav-item-icon fa fa-clock-o fa-fw"></span> rules
+                                <span class="sidebar-nav-item-icon fa fa-clock-o fa-fw"></span> Rules
                             </a>
                         </li>
                     </ul>

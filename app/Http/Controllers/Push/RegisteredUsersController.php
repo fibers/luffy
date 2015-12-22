@@ -12,11 +12,11 @@ namespace app\Http\Controllers\push;
 use App\Http\Controllers\Controller;
 use App\Models\Api\IMUser;
 
-class StatisticsController extends Controller
+class RegisteredUsersController extends Controller
 {
-    public function registered_users()
+    public function index()
     {
-        $user_ids_str = file_get_contents('http://push.halfcookie.cn:8080/registered_users');
+        $user_ids_str = file_get_contents(env('PUSH_ENDPOINT') . '/registered_users');
         $user_ids = json_decode($user_ids_str);
         $users = IMUser::whereIn('id', $user_ids->user_ids)->paginate(50);
 

@@ -23,7 +23,7 @@
                 <td class="col-md-1">{{ $user->id }}</td>
                 <td class="">{{ $user->nick }}</td>
                 <td class="col-md-1"><img src="{{ $user->avatar }}" class="img-responsive avatar-img" alt="Avatar"></td>
-                <td class="col-md-1">{{ date('Y-m-d H:i:s', $user->created) }}</td>
+                <td class="col-md-1">{{ $user->created }}</td>
             </tr>
         @endforeach
         </tbody>

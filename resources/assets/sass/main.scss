@@ -27,11 +27,16 @@ html {
 
 table[class='table'] {
   tr {
+    th {
+      text-align: center;
+    }
     td {
+      text-align: center;
       vertical-align: middle;
       img {
         height: 50px;
         width: 50px;
+        margin: auto auto;
       }
     }
   }

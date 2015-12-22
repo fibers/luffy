@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Content;
 
+use App\Models\Api\IMStory;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class PostsController extends Controller
+
+class SelfStoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +18,8 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+        $self_stories = IMStory::where('selfstory', 1)->paginate(env('DEFAULT_PAGE_SIZE'));
+        return view('self_story.index', ['self_stories' => $self_stories]);
     }
 
     /**

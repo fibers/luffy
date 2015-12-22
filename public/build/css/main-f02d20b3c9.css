@@ -21,10 +21,15 @@ html {
     padding: 70px 0 100px 0;
     background-color: #eee; }
 
+table[class='table'] tr th {
+  text-align: center; }
+
 table[class='table'] tr td {
+  text-align: center;
   vertical-align: middle; }
   table[class='table'] tr td img {
     height: 50px;
-    width: 50px; }
+    width: 50px;
+    margin: auto auto; }
 
 /*# sourceMappingURL=main.css.map */
