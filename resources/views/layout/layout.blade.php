@@ -38,7 +38,7 @@
                             </a>
                         </li>
 
-                        <li class="dropdown-header">Dramas</li>
+                        <li class="dropdown-header">Stories</li>
                         <li>
                             <a href="{{ route('content.stories.index') }}">
                                 <span class="fa fa-book fa-fw"></span> Story List
