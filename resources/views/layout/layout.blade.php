@@ -89,12 +89,12 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Push <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a href="/push/registered_users">
+                            <a href="{{ route('registered_users') }}">
                                 <span class="fa fa-list fw"></span> Registered Users
                             </a>
                         </li>
                         <li>
-                            <a href="/push/rules">
+                            <a href="{{ route('push.jobs.index') }}">
                                 <span class="sidebar-nav-item-icon fa fa-clock-o fa-fw"></span> Rules
                             </a>
                         </li>
@@ -193,5 +193,8 @@
 
 
 <script src="{{ elixir('js/all.js') }}"></script>
+
+@yield('js')
+
 </body>
 </html>

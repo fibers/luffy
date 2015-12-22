@@ -24,7 +24,7 @@ elixir(function (mix) {
             'bootstrap.css',
             'font-awesome.css'
         ])
-        .scripts(['jquery.js', 'bootstrap.js']);
+        .scripts(['jquery.js', 'bootstrap.js', 'main.js']);
 
     mix.version([
         'css/all.css',

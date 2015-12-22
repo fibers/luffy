@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', ['as' => 'home', function () {
     return view('welcome');
-});
+}]);
+
 
 Route::group(['prefix' => 'content', 'namespace' => 'content'], function () {
     Route::resource('users', 'UsersController',
@@ -28,7 +29,8 @@ Route::group(['prefix' => 'content', 'namespace' => 'content'], function () {
 
 
 Route::group(['prefix' => 'push', 'namespace' => 'push'], function () {
-    Route::get('registered_users', 'RegisteredUsersController@index');
-    Route::get('jobs', 'JobsController@index');
+    Route::get('registered_users', 'RegisteredUsersController@index')->name('registered_users');
+    Route::resource('jobs', 'JobsController',
+        ['only' => ['index', 'store']]);
 });
 

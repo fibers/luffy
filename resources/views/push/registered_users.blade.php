@@ -1,6 +1,6 @@
 @extends('layout.layout')
 
-@section('title', 'Users List')
+@section('title', 'Registered Users List')
 
 @section('content')
 

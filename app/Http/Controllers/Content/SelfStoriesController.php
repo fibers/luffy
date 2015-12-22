@@ -18,8 +18,8 @@ class SelfStoriesController extends Controller
      */
     public function index()
     {
-        $self_stories = IMStory::where('selfstory', 1)->paginate(env('DEFAULT_PAGE_SIZE'));
-        return view('self_story.index', ['self_stories' => $self_stories]);
+        $selfStories = IMStory::where('selfstory', 1)->paginate(env('DEFAULT_PAGE_SIZE'));
+        return view('self_story.index', ['selfStories' => $selfStories]);
     }
 
     /**

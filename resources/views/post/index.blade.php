@@ -1,11 +1,11 @@
 @extends('layout.layout')
 
-@section('title', 'Users List')
+@section('title', 'Posts List')
 
 @section('content')
 
     <div class="pull-right">
-        {!! $users->render() !!}
+        {!! $posts->render() !!}
     </div>
 
     <table class="table">
@@ -18,19 +18,19 @@
         </tr>
         </thead>
         <tbody>
-        @foreach ($users as $user)
+        @foreach ($posts as $post)
             <tr>
-                <td class="col-md-1">{{ $user->id }}</td>
-                <td class="">{{ $user->nick }}</td>
-                <td class="col-md-1"><img src="{{ $user->avatar }}" class="img-responsive avatar-img" alt="Avatar"></td>
-                <td class="col-md-1">{{ $user->created }}</td>
+                <td class="col-md-1">{{ $post->id }}</td>
+                <td class="">{{ $post->nick }}</td>
+                <td class="col-md-1"><img src="{{ $post->avatar }}" class="img-responsive avatar-img" alt="Avatar"></td>
+                <td class="col-md-1">{{ $post->created }}</td>
             </tr>
         @endforeach
         </tbody>
     </table>
 
     <div class="pull-right">
-        {!! $users->render() !!}
+        {!! $posts->render() !!}
     </div>
 
 @endsection
