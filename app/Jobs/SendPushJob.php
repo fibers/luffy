@@ -38,6 +38,8 @@ class SendPushJob extends Job implements SelfHandling, ShouldQueue
         $title = json_encode($this->data['title']);
         $payload = json_encode($this->data['payload']);
 
+        print_r($title);
+
         $content = http_build_query(
             array('user_ids' => $userIds,
                 'text' => $text,

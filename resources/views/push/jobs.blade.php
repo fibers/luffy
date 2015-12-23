@@ -103,20 +103,20 @@
                 btnSubmit.text('Submitting...');
 
 
-                var target = $('#selectTarget').val();
-                var type = $('#selectType').val();
-                var displayTitle = $('#inputDisplayTitle').val();
-                var displayText = $('#inputDisplayText').val();
-                var action = $('#selectAction').val();
-                var actionInfo = $('#inputActionInfo').val();
+                var selectTarget = $('#selectTarget');
+                var selectType = $('#selectType');
+                var inputDisplayTitle = $('#inputDisplayTitle');
+                var inputDisplayText = $('#inputDisplayText');
+                var selectAction = $('#selectAction');
+                var inputActionInfo = $('#inputActionInfo');
 
                 var data = {
-                    target: target,
-                    type: type,
-                    displayTitle: displayTitle,
-                    displayText: displayText,
-                    action: action,
-                    actionInfo: actionInfo
+                    target: selectTarget.val(),
+                    type: selectType.val(),
+                    displayTitle: inputDisplayTitle.val(),
+                    displayText: inputDisplayText.val(),
+                    action: selectAction.val(),
+                    actionInfo: inputActionInfo.val()
                 };
 
                 $.ajax('{{ route('push.jobs.store') }}', {
@@ -132,6 +132,13 @@
                             type: 'success',
                             delay: 5000
                         });
+
+                        selectTarget.val(0);
+                        selectType.val('s');
+                        inputDisplayTitle.val('');
+                        inputDisplayText.val('');
+                        selectAction.val('u');
+                        inputActionInfo.val('');
                     },
                     error: function (xhr, status, error) {
                         new PNotify({
