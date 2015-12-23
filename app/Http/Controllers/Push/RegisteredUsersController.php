@@ -6,7 +6,7 @@
  * Time: 下午2:31
  */
 
-namespace app\Http\Controllers\push;
+namespace app\Http\Controllers\Push;
 
 
 use App\Http\Controllers\Controller;

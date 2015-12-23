@@ -16,7 +16,7 @@ Route::get('/', ['as' => 'home', function () {
 }]);
 
 
-Route::group(['prefix' => 'content', 'namespace' => 'content'], function () {
+Route::group(['prefix' => 'content', 'namespace' => 'Content'], function () {
     Route::resource('users', 'UsersController',
         ['only' => ['index', 'show', 'edit', 'update']]);
     Route::resource('stories', 'StoriesController',
@@ -28,7 +28,7 @@ Route::group(['prefix' => 'content', 'namespace' => 'content'], function () {
 });
 
 
-Route::group(['prefix' => 'push', 'namespace' => 'push'], function () {
+Route::group(['prefix' => 'push', 'namespace' => 'Push'], function () {
     Route::get('registered_users', 'RegisteredUsersController@index')->name('registered_users');
     Route::resource('jobs', 'JobsController',
         ['only' => ['index', 'store']]);
