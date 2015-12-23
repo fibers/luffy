@@ -95,7 +95,7 @@
                         </li>
                         <li>
                             <a href="{{ route('push.jobs.index') }}">
-                                <span class="sidebar-nav-item-icon fa fa-clock-o fa-fw"></span> Rules
+                                <span class="sidebar-nav-item-icon fa fa-clock-o fa-fw"></span> Jobs
                             </a>
                         </li>
                     </ul>
@@ -193,6 +193,11 @@
 
 
 <script src="{{ elixir('js/all.js') }}"></script>
+
+<script type="text/javascript">
+    // Some initialization.
+    PNotify.prototype.options.styling = "bootstrap3";
+</script>
 
 @yield('js')
 

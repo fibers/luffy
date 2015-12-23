@@ -15,16 +15,25 @@ elixir(function (mix) {
 
     mix.copy('node_modules/bootstrap/dist/css/bootstrap.css', 'resources/assets/css/bootstrap.css')
         .copy('node_modules/font-awesome/css/font-awesome.css', 'resources/assets/css/font-awesome.css')
+        .copy('node_modules/pnotify/dist/pnotify.css', 'resources/assets/css/pnotify.css')
         .copy('node_modules/bootstrap/dist/js/bootstrap.js', 'resources/assets/js/bootstrap.js')
         .copy('node_modules/jquery/dist/jquery.js', 'resources/assets/js/jquery.js')
-        .copy('node_modules/font-awesome/fonts', 'public/build/fonts');
+        .copy('node_modules/pnotify/dist/pnotify.js', 'resources/assets/js/pnotify.js')
+        .copy('node_modules/font-awesome/fonts', 'public/build/fonts')
+        .copy('node_modules/bootstrap/dist/fonts', 'public/build/fonts');
 
-    mix.sass('main.scss').
-        styles([
+    mix.sass('main.scss')
+        .styles([
             'bootstrap.css',
-            'font-awesome.css'
+            'font-awesome.css',
+            'pnotify.css'
         ])
-        .scripts(['jquery.js', 'bootstrap.js', 'main.js']);
+        .scripts([
+            'jquery.js',
+            'bootstrap.js',
+            'pnotify.js',
+            'main.js'
+        ]);
 
     mix.version([
         'css/all.css',

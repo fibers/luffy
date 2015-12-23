@@ -31,8 +31,32 @@ class SendPushJob extends Job implements SelfHandling, ShouldQueue
      */
     public function handle()
     {
-        $file = fopen('/tmp/test.txt', 'w+');
-        fwrite($file, $this->data['text'] . ':' . $this->data['time'] . "\n");
-        fclose($file);
+        $pushEndpoint = env('PUSH_ENDPOINT') . '/push_to_users';
+
+        $userIds = json_encode($this->data['userIds']);
+        $text = json_encode($this->data['text']);
+        $title = json_encode($this->data['title']);
+        $payload = json_encode($this->data['payload']);
+
+        $content = http_build_query(
+            array('user_ids' => $userIds,
+                'text' => $text,
+                'title' => $title,
+                'payload' => $payload
+            )
+        );
+
+        $options = array(
+            'http' => array(
+                'header' => "Content-Type: application/x-www-form-urlencoded\r\n" .
+                    "Content-Length:" . strlen($content) . "\r\n" .
+                    "\r\n",
+                'method' => 'POST',
+                'content' => $content
+            ),
+        );
+
+        $context = stream_context_create($options);
+        file_get_contents($pushEndpoint, false, $context);
     }
 }

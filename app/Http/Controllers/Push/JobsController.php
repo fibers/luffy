@@ -17,36 +17,38 @@ class JobsController extends Controller
 {
     use DispatchesJobs;
 
-    public function index(){
+    public function index()
+    {
         return view('push.jobs');
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $target = $request->input('target');
         $type = $request->input('type');
+        $displayTitle = $request->input('displayTitle');
+        $displayText = $request->input('displayText');
         $action = $request->input('action');
         $actionInfo = $request->input('actionInfo');
 
         $userIds = array();
-        if( $target == 0){
+        if ($target == 0) {
             $userIdsResponse = file_get_contents(env('PUSH_ENDPOINT') . '/registered_users');
             $userIdsResponseJson = json_decode($userIdsResponse);
-            $userIds = $userIdsResponseJson['user_ids'];
+            $userIds = $userIdsResponseJson->user_ids;
         }
 
         $payload = array('t' => $type, 'a' => $action . ':' . $actionInfo);
 
-    }
+        while (count($userIds)) {
+            $spliceUserIds = array_splice($userIds, 0, 60);
+            $data = array('userIds' => $spliceUserIds, 'title' => $displayTitle,
+                'text' => $displayText, 'payload' => $payload);
 
-    public function push()
-    {
-        $data = new Object();
-        $data->a = 'aa';
-        for($i=0; $i<100; $i++){
-            $data['text'] = $i;
-            $data['time'] = time();
             $job = (new SendPushJob($data))->onQueue('push_jobs');
             $this->dispatch($job);
         }
+
+        return 'OK';
     }
 }
