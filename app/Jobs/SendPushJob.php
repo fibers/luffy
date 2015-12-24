@@ -34,11 +34,9 @@ class SendPushJob extends Job implements SelfHandling, ShouldQueue
         $pushEndpoint = env('PUSH_ENDPOINT') . '/push_to_users';
 
         $userIds = json_encode($this->data['userIds']);
-        $text = json_encode($this->data['text']);
-        $title = json_encode($this->data['title']);
+        $text = $this->data['text'];
+        $title = $this->data['title'];
         $payload = json_encode($this->data['payload']);
-
-        print_r($title);
 
         $content = http_build_query(
             array('user_ids' => $userIds,
@@ -51,7 +49,7 @@ class SendPushJob extends Job implements SelfHandling, ShouldQueue
         $options = array(
             'http' => array(
                 'header' => "Content-Type: application/x-www-form-urlencoded\r\n" .
-                    "Content-Length:" . strlen($content) . "\r\n" .
+                    "Content-length:" . strlen($content) . "\r\n" .
                     "\r\n",
                 'method' => 'POST',
                 'content' => $content
