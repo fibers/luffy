@@ -55,6 +55,7 @@ return [
         'mysql_luffy' => [
             'driver'    => 'mysql',
             'host'      => env('LUFFY_DB_HOST', 'localhost'),
+            'port'      => env('LUFFY_DB_PORT', 3306),
             'database'  => env('LUFFY_DB_DATABASE', 'forge'),
             'username'  => env('LUFFY_DB_USERNAME', 'forge'),
             'password'  => env('LUFFY_DB_PASSWORD', ''),
@@ -67,6 +68,7 @@ return [
         'mysql_api' => [
             'driver'    => 'mysql',
             'host'      => env('API_DB_HOST', 'localhost'),
+            'port'      => env('API_DB_PORT', 3306),
             'database'  => env('API_DB_DATABASE', 'forge'),
             'username'  => env('API_DB_USERNAME', 'forge'),
             'password'  => env('API_DB_PASSWORD', ''),
