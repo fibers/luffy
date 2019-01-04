@@ -1,3 +1,3 @@
-## Yuxi Luffy
+## Luffy
 
-A message push system
+A message push system based on Laravel framework.
